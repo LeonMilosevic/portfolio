@@ -26,7 +26,7 @@ const About = () => {
             stack is the MERN stack, but I’m intrested in learning Python soon.
             In my free time I like working out and occasionally playing video
             games such as HearthStone. I grew up on Blizzard. Thank you and I am
-            look forward to hearing from you!
+            looking forward to hear from you!
           </p>
         </div>
       </div>
