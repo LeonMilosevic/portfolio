@@ -37,7 +37,7 @@ const LandingPage = () => {
       </div>
       <div className="custom-text">
         Hello, I'm <span style={{ color: "#14f7ee" }}>Leon</span>, <hr />
-        web developer
+        React developer
         <hr />
         Nice to meet you!
       </div>

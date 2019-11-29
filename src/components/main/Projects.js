@@ -39,7 +39,7 @@ const Projects = () => {
         linkSite={"https://clothify.online/"}
       >
         <div className="row">
-          <div className="col-6">
+          <div className="col-sm-12 col-md-6 col-lg-6">
             <li>
               <strong className="underline">Authentication</strong>:
             </li>
@@ -65,7 +65,7 @@ const Projects = () => {
               <li>Test account: admin@email.com, admin123</li>
             </ul>
           </div>
-          <div className="col-6">
+          <div className="col-sm-12 col-md-6 col-lg-6">
             <li>
               <strong className="underline">Products</strong>:
             </li>

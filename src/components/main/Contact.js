@@ -11,7 +11,7 @@ const Contact = () => {
           <div className="contact-wrapper-cover"></div>
           <div className="contact-wrapper-cover-bottom"></div>
           <h6>Leon Milosevic</h6>
-          <h6>email: leonleon787@yahoo.com</h6>
+          <h6>email: leonn.milosevic@gmail.com</h6>
           <h6>phone: +37060754357</h6>
           <div>
             <a
