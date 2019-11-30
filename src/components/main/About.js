@@ -22,11 +22,12 @@ const About = () => {
             I am a web developer who loves coding, enjoys learning and
             exploring. My main goal is to work on products that are changing the
             world or making your everyday easier. I have competitive nature, I’m
-            always seeking for more, I enjoy overcoming challenges. My main
-            stack is the MERN stack, but I’m intrested in learning Python soon.
-            In my free time I like working out and occasionally playing video
-            games such as HearthStone. I grew up on Blizzard. Thank you and I am
-            looking forward to hear from you!
+            always seeking for more, I enjoy overcoming challenges. I use React,
+            Node.js with Express, and MongoDB NoSQL. Javascript, SASS and
+            bootstrap, but I’m intrested in learning Python soon. In my free
+            time I like working out and occasionally playing video games such as
+            HearthStone. I grew up on Blizzard. Thank you and I am looking
+            forward to hear from you!
           </p>
         </div>
       </div>
