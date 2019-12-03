@@ -305,6 +305,8 @@ body {
 /* about me */
 
 .about-me-img {
+  position: relative;
+  transform: translate(-50%, 20%);
   width: 250px;
   height: 250px;
   padding: 20px;
@@ -448,11 +450,21 @@ body {
     height: 100px;
   }
   .about-me-img {
-    position: absolute;
-    left: 25%;
-    top: 35%;
-    width: 150px;
-    height: 150px;
+    position: relative;
+    transform: translate(-50%, 20%);
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-right: 3px solid #ffffff;
+    border-radius: 50%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .about-me-img {
+    position: relative;
+    transform: translate(-50%, 50%);
+    width: 250px;
+    height: 250px;
     padding: 20px;
     border-right: 3px solid #ffffff;
     border-radius: 50%;
@@ -510,5 +522,15 @@ body {
   }
   .contact-wrapper {
     border: 0px solid #ffffff;
+  }
+
+  .about-me-img {
+    position: relative;
+    transform: translate(0%, 20%);
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    border-right: 3px solid #ffffff;
+    border-radius: 50%;
   }
 }
