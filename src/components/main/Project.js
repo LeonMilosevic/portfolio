@@ -11,7 +11,12 @@ const Project = props => {
           </h1>
           <div className="card">
             <div className="card-wrapper">
-              <a className="nav-links" target="_blank" href={props.linkSite}>
+              <a
+                className="nav-links"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={props.linkSite}
+              >
                 <img
                   className="rounded-image-custom"
                   src={props.img}

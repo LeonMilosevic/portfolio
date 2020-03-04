@@ -1,18 +1,13 @@
 import React from "react";
 import "./App.css";
-// import components
-import LandingPage from "./components/main/LandingPage";
-import Projects from "./components/main/Projects";
-import About from "./components/main/About";
-import Contact from "./components/main/Contact";
+// import router
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./components/main/Routes";
 
 const App = () => (
-  <div>
-    <LandingPage />
-    <Projects />
-    <About />
-    <Contact />
-  </div>
+  <Router>
+    <Routes />
+  </Router>
 );
 
 export default App;

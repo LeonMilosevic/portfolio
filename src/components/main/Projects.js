@@ -14,12 +14,63 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="nav-links"
             target="_blank"
+            href="http://167.172.178.229/"
+          >
+            GoTo share a ride
+          </a>
+        }
+        projectDesc={"Connecting people to share a ride"}
+        img={require("../../images/poolme-logo1.png")}
+        techUsed={
+          "React, Node, Javascript, sass, Socket IO, Google geolocation API, material design, Mongo DB"
+        }
+        linkCodeFront={"https://github.com/LeonMilosevic/poolme-front"}
+        linkSite={"http://167.172.178.229/"}
+        backendLink={
+          <a
+            className="project-link"
+            rel="noopener noreferrer"
+            href="https://github.com/LeonMilosevic/poolme-back"
+            target="_blank"
+          >
+            code backend
+          </a>
+        }
+      >
+        <ul className="list-unstyled">
+          <div className="row">
+            <div className="col-12">
+              <h5>
+                <strong className="underline">
+                  Featuers and about the app
+                </strong>
+              </h5>
+              <p>
+                App was designed for mobile usage rather than desktop. The app
+                has a real-time chat feature. Users can search and pick a
+                location from Google geolocation auto-suggest service. They can
+                chose different type of rules they would like other passengers
+                to follow, as well as any adittional text they would like to
+                share. App also tracks peoples distance travaled, and combines
+                it to display how much has the person traveled using this app.
+                In order to share a ride or join as a passanger, users need to
+                create an account and be logged in.
+              </p>
+            </div>
+          </div>
+        </ul>
+      </Project>
+      <Project
+        projectName={
+          <a
+            rel="noopener noreferrer"
+            className="nav-links"
+            target="_blank"
             href="https://clothify.online/"
           >
             Clothify ecommerce
           </a>
         }
-        coverHeader={"cover-div-header"}
         projectDesc={"Fullstack ecommerce app"}
         img={
           "https://res.cloudinary.com/clothify/image/upload/v1574208952/facebook-logo_biobli.png"
@@ -101,7 +152,6 @@ const Projects = () => {
             Calorie Calculator
           </a>
         }
-        coverHeader={"cover-div-header-2"}
         projectDesc={"Heroku app Vanilla JS Calorie calculator"}
         img={require("../../images/eeetwell_logo_mobile.jpg")}
         techUsed={"Vanila JS, sass, material design"}
