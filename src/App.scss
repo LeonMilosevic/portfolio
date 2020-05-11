@@ -1,3 +1,7 @@
+// imports
+@import "./scss/landing-page.scss";
+@import "./scss/loader-page.scss";
+
 /* variables */
 :root {
   --main-bg-color: #0d0d0d;
@@ -16,10 +20,6 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   font-family: "Nanum Gothic Coding", monospace;
-}
-
-.landing-page {
-  height: 100vh;
 }
 
 /* logo */
@@ -41,142 +41,6 @@ body {
   font-weight: 300;
   letter-spacing: 5px;
   z-index: 1000;
-}
-
-/* nav */
-
-.nav-custom-fixed {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0%, -50%);
-}
-
-.nav-links {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav-links:link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav-links:hover {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav-links:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav-links:active {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.list-unstyled {
-  font-size: 1.5rem;
-  margin-left: 1rem;
-}
-
-.list-unstyled-item-custom {
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 1rem 0;
-  padding: 0.2rem 1rem;
-  z-index: -5;
-  transition: all 5s ease-out;
-}
-
-.item-top {
-  width: 80%;
-}
-
-.cover-div-top {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 6%;
-  width: 50%;
-  height: 18%;
-  border-top: 3px solid #0d0d0d;
-  border-bottom: 3px solid #0d0d0d;
-  z-index: 5;
-}
-.list-unstyled-item-custom:hover {
-  cursor: pointer;
-}
-
-.list-unstyled-item-custom:hover .cover-div-top {
-  animation: fillborder 0.2s ease-in;
-  animation-fill-mode: forwards;
-}
-
-.item-project {
-  width: 100%;
-}
-
-.cover-div-project {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 29%;
-  width: 50%;
-  height: 18%;
-  border-top: 4px solid #0d0d0d;
-  border-bottom: 3px solid #0d0d0d;
-  z-index: 5;
-}
-.list-unstyled-item-custom:hover .cover-div-project {
-  animation: fillborder 0.2s ease-in;
-  animation-fill-mode: forwards;
-}
-.item-about {
-  width: 120%;
-}
-
-.cover-div-about {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 52%;
-  width: 50%;
-  height: 19%;
-  border-top: 5px solid #0d0d0d;
-  border-bottom: 5px solid #0d0d0d;
-  z-index: 5;
-}
-
-.list-unstyled-item-custom:hover .cover-div-about {
-  animation: fillborder 0.2s ease-in;
-  animation-fill-mode: forwards;
-}
-
-.item-contact {
-  width: 140%;
-}
-
-.cover-div-contact {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 76%;
-  width: 50%;
-  height: 19%;
-  border-top: 5px solid #0d0d0d;
-  border-bottom: 5px solid #0d0d0d;
-  z-index: 5;
-}
-
-.list-unstyled-item-custom:hover .cover-div-contact {
-  animation: fillborder 0.2s ease-in;
-  animation-fill-mode: forwards;
 }
 
 /* landing page text */

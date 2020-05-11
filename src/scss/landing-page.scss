@@ -1,0 +1,23 @@
+// circles positioning and size for landing page
+.landing-page_circle_holder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/*
+600 px h and w
+.loader_circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  &__circle_1 {
+    transform: translate(-70%, -50%);
+  }
+  &__circle_2 {
+    transform: translate(-30%, -57%);
+  }
+  &__circle_3 {
+    transform: translate(-50%, -60%);
+  }
+}
+*/
