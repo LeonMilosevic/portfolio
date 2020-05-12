@@ -1,6 +1,8 @@
 // imports
+@import "./scss/variables.scss";
 @import "./scss/landing-page.scss";
 @import "./scss/loader-page.scss";
+@import "./scss/nav.scss";
 
 /* variables */
 :root {
@@ -20,17 +22,6 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   font-family: "Nanum Gothic Coding", monospace;
-}
-
-/* logo */
-
-.logo {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: inline-block;
-  width: 15px;
-  height: 20px;
 }
 
 /* header */

@@ -1,8 +1,12 @@
 import React from "react";
+import Logo from "../ui/Logo";
 
 const About = () => {
   return (
     <div className="container my-3">
+      <div className="logo">
+        <Logo />
+      </div>
       <h1 id="about" className="text-center headers-custom mt-5">
         About
       </h1>

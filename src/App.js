@@ -11,7 +11,7 @@ const App = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 5000);
+    }, 3200);
   }, []);
 
   return <Router>{loaded ? <Routes /> : <LoaderScreen />}</Router>;

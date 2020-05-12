@@ -1,23 +1,66 @@
-// circles positioning and size for landing page
-.landing-page_circle_holder {
+// circles overwriting and scaling for landing page
+.landing-page_circle__circle-scale_1 {
+  transform: translate(-110%, -50%) scale(2) !important;
+  animation: fadeOut 0.3s ease-out forwards;
+}
+.landing-page_circle__circle-scale_2 {
+  transform: translate(10%, -50%) scale(2) !important;
+  animation: fadeOut 0.3s ease-out forwards;
+}
+.landing-page_circle__circle-scale_3 {
+  transform: translate(-50%, -135%) scale(2) !important;
+  animation: fadeOut 0.3s ease-out forwards;
+}
+// header text
+.landing-page_header-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  text-shadow: 4px 10px 20px rgba(0, 0, 0, 0.61);
+
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -70%);
+  opacity: 0;
 }
-/*
-600 px h and w
-.loader_circle {
+.landing-page_subheader-text {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+
   position: absolute;
   top: 50%;
   left: 50%;
-  &__circle_1 {
-    transform: translate(-70%, -50%);
+  transform: translate(120%, 140%);
+  opacity: 0;
+}
+
+/* logo */
+
+.logo {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  opacity: 0;
+}
+
+// animations in landing page
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
   }
-  &__circle_2 {
-    transform: translate(-30%, -57%);
-  }
-  &__circle_3 {
-    transform: translate(-50%, -60%);
+  100% {
+    opacity: 35%;
   }
 }
-*/

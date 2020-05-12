@@ -1,9 +1,7 @@
 import React from "react";
-import Circle1 from "../../images/circle1.svg";
-import Circle2 from "../../images/circle2.svg";
-import Circle3 from "../../images/circle3.svg";
+import Dots from "../ui/Dots";
 // third lib import
-import { gsap, Power1 } from "gsap";
+import { gsap, Back } from "gsap";
 const LoadingScreen = () => {
   React.useEffect(() => {
     const circle1 = document.querySelector(".loader_circle__circle_1");
@@ -16,78 +14,140 @@ const LoadingScreen = () => {
 
     /* Desc: Take one circle(element) and rotate it fully with overlapsing timelines at the same time */
     // first timeline
-    tl1.to(circle1, { x: -125, y: -123, duration: 0.5, scale: 1.2 });
-    tl1.to(circle1, { x: -25, y: 5, duration: 0.5, scale: 1.5 });
-    tl1.to(circle1, { x: -225, duration: 0.5, scale: 2 });
+    tl1.to(circle1, {
+      xPercent: 60,
+      yPercent: -145,
+      duration: 0.5,
+      scale: 1.3,
+      ease: Back,
+    });
+    tl1.to(circle1, {
+      xPercent: 120,
+      yPercent: -50,
+      duration: 0.5,
+      scale: 1.7,
+      ease: Back,
+    });
+    tl1.to(circle1, { xPercent: 0, duration: 0.5, scale: 2, ease: Back });
     tl1.to(circle1, {
       filter: "blur(5px)",
       duration: 0.5,
+      ease: Back,
     });
     // reversing tl 1 in blur mode
-    tl1.to(circle1, { x: -25, y: 5, duration: 0.1 });
-    tl1.to(circle1, { x: -115, y: -113, duration: 0.1 });
-    tl1.to(circle1, { x: -220, y: 0, duration: 0.1 });
+    tl1.to(circle1, {
+      xPercent: 120,
+      yPercent: -50,
+      duration: 0.1,
+      ease: Back,
+    });
+    tl1.to(circle1, {
+      xPercent: 60,
+      yPercent: -145,
+      duration: 0.1,
+      ease: Back,
+    });
+    tl1.to(circle1, { xPercent: 0, yPercent: -50, duration: 0.1, ease: Back });
     tl1.to(circle1, {
       filter: "blur(0px)",
       duration: 0.5,
+      ease: Back,
     });
     // second timeline
-    tl2.to(circle2, { x: -233, duration: 0.5, scale: 1.2 });
-    tl2.to(circle2, { x: -135, y: -266, duration: 0.5, scale: 1.5 });
-    tl2.to(circle2, { x: -35, y: -150, duration: 0.5, scale: 2 });
+    tl2.to(circle2, { xPercent: -120, duration: 0.5, scale: 1.3, ease: Back });
+    tl2.to(circle2, {
+      xPercent: -60,
+      yPercent: -145,
+      scale: 1.7,
+      duration: 0.5,
+      ease: Back,
+    });
+    tl2.to(circle2, {
+      xPercent: 0,
+      yPercent: -50,
+      duration: 0.5,
+      scale: 2,
+      ease: Back,
+    });
     tl2.to(circle2, {
       filter: "blur(5px)",
       duration: 0.5,
+      ease: Back,
     });
     // reversing tl 2 in blur mode
-    tl2.to(circle2, { x: -135, y: -266, duration: 0.1 });
-    tl2.to(circle2, { x: -233, y: -160, duration: 0.1 });
-    tl2.to(circle2, { x: -40, y: -160, duration: 0.1 });
+    tl2.to(circle2, {
+      xPercent: -60,
+      yPercent: -145,
+      duration: 0.1,
+      ease: Back,
+    });
+    tl2.to(circle2, {
+      xPercent: -120,
+      yPercent: -50,
+      duration: 0.1,
+      ease: Back,
+    });
+    tl2.to(circle2, {
+      xPercent: 0,
+      yPercent: -50,
+      duration: 0.1,
+      ease: Back,
+    });
     tl2.to(circle2, {
       filter: "blur(0px)",
       duration: 0.5,
+      ease: Back,
     });
     // third timeline
-    tl3.to(circle3, { x: 100, y: -123, duration: 0.5, scale: 1.2 });
-    tl3.to(circle3, { x: -100, duration: 0.5, scale: 1.5 });
-    tl3.to(circle3, { x: 0, y: -240, duration: 0.5, scale: 2 });
+    tl3.to(circle3, {
+      xPercent: 10,
+      yPercent: 95,
+      duration: 0.5,
+      scale: 1.3,
+      ease: Back,
+    });
+    tl3.to(circle3, { xPercent: -110, duration: 0.5, scale: 1.7, ease: Back });
+    tl3.to(circle3, {
+      xPercent: -50,
+      yPercent: 0,
+      duration: 0.5,
+      scale: 2,
+      ease: Back,
+    });
     tl3.to(circle3, {
       filter: "blur(5px)",
       duration: 0.5,
+      ease: Back,
     });
     // reversing tl 3 in blur mode
-    tl3.to(circle3, { x: -100, y: -123, duration: 0.1 });
-    tl3.to(circle3, { x: 100, y: -123, duration: 0.1 });
-    tl3.to(circle3, { x: 10, y: -243, duration: 0.1 });
+    tl3.to(circle3, {
+      xPercent: -110,
+      yPercent: 95,
+      duration: 0.1,
+      ease: Back,
+    });
+    tl3.to(circle3, {
+      xPercent: 10,
+      yPercent: 95,
+      duration: 0.1,
+      ease: Back,
+    });
+    tl3.to(circle3, {
+      xPercent: -50,
+      yPercent: 0,
+      duration: 0.1,
+      ease: Back,
+    });
     tl3.to(circle3, {
       filter: "blur(0px)",
       duration: 0.5,
+      ease: Back,
     });
   }, []);
 
   return (
-    <div className="load-page">
-      <div className="loader_circle loader_circle__circle_1">
-        <img
-          style={{ height: 250, width: 250 }}
-          src={Circle1}
-          alt="Loading Circle"
-        />
-      </div>
-      <div className="loader_circle loader_circle__circle_2">
-        <img
-          style={{ height: 250, width: 250 }}
-          src={Circle2}
-          alt="Loading Circle"
-        />
-      </div>
-      <div className="loader_circle loader_circle__circle_3">
-        <img
-          style={{ height: 250, width: 250 }}
-          src={Circle3}
-          alt="Loading Circle"
-        />
-      </div>
+    <div>
+      <Dots />
     </div>
   );
 };
