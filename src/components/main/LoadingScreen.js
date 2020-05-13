@@ -53,6 +53,12 @@ const LoadingScreen = () => {
       duration: 0.5,
       ease: Back,
     });
+    tl1.to(circle1, {
+      opacity: 0.35,
+      duration: 0.3,
+      delay: 0.1,
+      ease: Back,
+    });
     // second timeline
     tl2.to(circle2, { xPercent: -120, duration: 0.5, scale: 1.3, ease: Back });
     tl2.to(circle2, {
@@ -98,6 +104,12 @@ const LoadingScreen = () => {
       duration: 0.5,
       ease: Back,
     });
+    tl2.to(circle2, {
+      opacity: 0.35,
+      duration: 0.3,
+      delay: 0.1,
+      ease: Back,
+    });
     // third timeline
     tl3.to(circle3, {
       xPercent: 10,
@@ -141,6 +153,12 @@ const LoadingScreen = () => {
     tl3.to(circle3, {
       filter: "blur(0px)",
       duration: 0.5,
+      ease: Back,
+    });
+    tl3.to(circle3, {
+      opacity: 0.35,
+      duration: 0.3,
+      delay: 0.1,
       ease: Back,
     });
   }, []);

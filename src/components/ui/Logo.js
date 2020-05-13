@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import React from "react";
 
-const Logo = () => {
+const Logo = (props) => {
   return (
-    <Link to="/">
+    <Link onClick={props.changePageFromAnyPageToHome} to="/">
       <LogoImg />
     </Link>
   );

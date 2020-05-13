@@ -1,15 +1,15 @@
 // circles overwriting and scaling for landing page
-.landing-page_circle__circle-scale_1 {
-  transform: translate(-110%, -50%) scale(2) !important;
-  animation: fadeOut 0.3s ease-out forwards;
+.landing-page_circle__circle-scale_1.loader_circle__circle_1 {
+  transform: translate(-110%, -50%) scale(2);
+  opacity: 0.35;
 }
-.landing-page_circle__circle-scale_2 {
-  transform: translate(10%, -50%) scale(2) !important;
-  animation: fadeOut 0.3s ease-out forwards;
+.landing-page_circle__circle-scale_2.loader_circle__circle_2 {
+  transform: translate(10%, -50%) scale(2);
+  opacity: 0.35;
 }
-.landing-page_circle__circle-scale_3 {
-  transform: translate(-50%, -135%) scale(2) !important;
-  animation: fadeOut 0.3s ease-out forwards;
+.landing-page_circle__circle-scale_3.loader_circle__circle_3 {
+  transform: translate(-50%, -135%) scale(2);
+  opacity: 0.35;
 }
 // header text
 .landing-page_header-text {
@@ -52,15 +52,4 @@
   width: 15px;
   height: 20px;
   opacity: 0;
-}
-
-// animations in landing page
-
-@keyframes fadeOut {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 35%;
-  }
 }

@@ -1,0 +1,57 @@
+.contact-page_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-page_conatct-header {
+  font-size: 42px;
+  font-weight: 700;
+  transform: translate(0%, -180%);
+  color: $green-text-color;
+  opacity: 0;
+}
+
+.contact-page_contact-info_wrapper {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 45px;
+  transform: translate(0%, -20%);
+}
+
+.contact-page_contact-info_name {
+  opacity: 0;
+  transform: translate(0%, 20%);
+}
+.contact-page_contact-info_email {
+  opacity: 0;
+  transform: translate(0%, 20%);
+}
+.contact-page_contact-info_phone {
+  transform: translate(0%, 20%);
+  opacity: 0;
+}
+
+.contact-page_contact-info_github {
+  opacity: 0;
+  transform: translate(0%, 20%);
+  transition: color 0.2s ease-in;
+  &:link {
+    text-decoration: none;
+    color: $main-text-color;
+  }
+  &:visited {
+    text-decoration: none;
+    color: $main-text-color;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $green-text-color;
+  }
+  &:active {
+    text-decoration: none;
+    color: $main-text-color;
+  }
+}

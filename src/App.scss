@@ -3,6 +3,9 @@
 @import "./scss/landing-page.scss";
 @import "./scss/loader-page.scss";
 @import "./scss/nav.scss";
+@import "./scss/about-page.scss";
+@import "./scss/contact-page.scss";
+@import "./scss/skills-page.scss";
 
 /* variables */
 :root {
@@ -155,74 +158,6 @@ body {
 
 .underline {
   border-bottom: 1px solid #ffffff;
-}
-
-/* about me */
-
-.about-me-img {
-  position: relative;
-  transform: translate(-50%, 20%);
-  width: 250px;
-  height: 250px;
-  padding: 20px;
-  border-right: 3px solid #ffffff;
-  border-radius: 50%;
-}
-
-/* contact */
-
-.contact-wrapper {
-  border: 1px solid #ffffff;
-  padding: 30px;
-}
-
-.contact-wrapper-cover {
-  display: inline-block;
-  position: absolute;
-  left: 0px;
-  top: -1%;
-  width: 50%;
-  height: 0%;
-  border-top: 5px solid #0d0d0d;
-  border-bottom: 5px solid #0d0d0d;
-  z-index: 5;
-}
-
-.contact-wrapper-cover-bottom {
-  display: inline-block;
-  position: absolute;
-  right: 0px;
-  bottom: -1px;
-  width: 50%;
-  height: 0%;
-  border-top: 5px solid #0d0d0d;
-  border-bottom: 5px solid #0d0d0d;
-  z-index: 5;
-}
-
-.github-styled {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-.github-styled:link {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-.github-styled:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-.github-styled:visited {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-.github-styled:active {
-  text-decoration: underline;
-  color: #ffffff;
 }
 
 /* animations */

@@ -1,0 +1,15 @@
+.skills-page-text {
+  &_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+  &-left_table {
+    transform: translate(-20%, 0);
+  }
+  &-right_table {
+    transform: translate(40%, 0);
+  }
+}
