@@ -13,3 +13,24 @@
     transform: translate(40%, 0);
   }
 }
+
+.skills-page_list {
+  list-style-type: none;
+  text-align: center;
+  &-header {
+    transform: translate(0%, -80%);
+    opacity: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: $green-text-color;
+    margin-bottom: 20px;
+  }
+  &-li {
+    transform: translate(0%, 20%);
+    opacity: 0;
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}

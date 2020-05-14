@@ -1,183 +1,139 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+// import third party
+import { gsap, Back } from "gsap";
+import { useHistory } from "react-router-dom";
 // import components
-import Project from "./Project";
+import Logo from "../ui/Logo";
+import Dots from "../ui/Dots";
+import Nav from "../main/Nav";
+// imoprt helpers
+import { changePageExitTransition } from "../ui/Helpers";
+import ProjectCard from "./ProjectCard";
+// import images
+import clothifyImg from "../../images/clothify-img.png";
+import poolmeImg from "../../images/poolme-img.png";
+import domasImg from "../../images/domas-img.png";
+import eeetwellImg from "../../images/eeetwell-img.png";
 
 const Projects = () => {
+  let logo = useRef(null);
+  let galleryRef = useRef(null);
+  let projectCard1 = React.createRef();
+  let projectCard2 = React.createRef();
+  let projectCard3 = React.createRef();
+  let projectCard4 = React.createRef();
+  let nav = React.createRef(null);
+  let header = useRef(null);
+  const history = useHistory();
+
+  const changeFromProjectsToAny = (destination) => (e) => {
+    e.preventDefault();
+    // pass parametars from home page elements to animate
+    changePageExitTransition(
+      logo,
+      nav.current,
+      header,
+      galleryRef
+      // to be filled
+    );
+    setTimeout(() => {
+      history.push(destination);
+    }, 1600);
+  };
+
+  useEffect(() => {
+    const circle1 = document.querySelector(".loader_circle__circle_1");
+    const circle2 = document.querySelector(".loader_circle__circle_2");
+    const circle3 = document.querySelector(".loader_circle__circle_3");
+
+    const tl = new gsap.timeline();
+
+    gsap.to(circle1, { opacity: 0.15, duration: 0.9, ease: Back });
+    gsap.to(circle2, { opacity: 0.15, duration: 0.9, ease: Back });
+    gsap.to(circle3, { opacity: 0.15, duration: 0.9, ease: Back });
+
+    tl.to(header, {
+      opacity: 1,
+      duration: 0.5,
+      ease: Back,
+      delay: 0.7,
+      yPercent: 100,
+    });
+    tl.to(projectCard1.current, {
+      opacity: 1,
+      duration: 0.12,
+      yPercent: -50,
+      ease: Back,
+      delay: 0.4,
+    });
+    tl.to(projectCard2.current, {
+      opacity: 1,
+      duration: 0.12,
+      yPercent: -50,
+      ease: Back,
+    });
+    tl.to(projectCard3.current, {
+      opacity: 1,
+      duration: 0.12,
+      yPercent: -50,
+      ease: Back,
+    });
+    tl.to(projectCard4.current, {
+      opacity: 1,
+      duration: 0.12,
+      yPercent: -50,
+      ease: Back,
+    });
+
+    gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2.2 });
+    gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2.2 });
+    console.log("called use effect");
+  }, [projectCard1, projectCard2, projectCard3, projectCard4, nav]);
   return (
-    <div className="container">
-      <h1 id="projects" className="text-center headers-custom">
+    <div className="container my-3">
+      <Nav
+        ref={nav}
+        changePageFromAnyPageToSkills={changeFromProjectsToAny("/skills")}
+        changePageFromAnyPageToAbout={changeFromProjectsToAny("/about")}
+        changePageFromAnyPageToContact={changeFromProjectsToAny("/contact")}
+      />
+      <Dots
+        extraClassCirlcle1={"landing-page_circle__circle-scale_1"}
+        extraClassCirlcle2={"landing-page_circle__circle-scale_2"}
+        extraClassCirlcle3={"landing-page_circle__circle-scale_3"}
+      />
+      <div ref={(el) => (logo = el)} className="logo">
+        <Logo changePageFromAnyPageToHome={changeFromProjectsToAny("/")} />
+      </div>
+      <div ref={(el) => (header = el)} className="projects-page-header">
         Projects
-      </h1>
-      <Project
-        projectName={
-          <a
-            rel="noopener noreferrer"
-            className="nav-links"
-            target="_blank"
-            href="http://167.172.178.229/"
-          >
-            GoTo share a ride
-          </a>
-        }
-        projectDesc={"Connecting people to share a ride"}
-        img={require("../../images/poolme-logo1.png")}
-        techUsed={
-          "React, Node, Javascript, sass, Socket IO, Google geolocation API, material design, Mongo DB"
-        }
-        linkCodeFront={"https://github.com/LeonMilosevic/poolme-front"}
-        linkSite={"http://167.172.178.229/"}
-        backendLink={
-          <a
-            className="project-link"
-            rel="noopener noreferrer"
-            href="https://github.com/LeonMilosevic/poolme-back"
-            target="_blank"
-          >
-            code backend
-          </a>
-        }
-      >
-        <ul className="list-unstyled">
-          <div className="row">
-            <div className="col-12">
-              <h5>
-                <strong className="underline">
-                  Featuers and about the app
-                </strong>
-              </h5>
-              <p>
-                App was designed for mobile usage rather than desktop. The app
-                has a real-time chat feature. Users can search and pick a
-                location from Google geolocation auto-suggest service. They can
-                chose different type of rules they would like other passengers
-                to follow, as well as any adittional text they would like to
-                share. App also tracks peoples distance travaled, and combines
-                it to display how much has the person traveled using this app.
-                In order to share a ride or join as a passanger, users need to
-                create an account and be logged in.
-              </p>
-            </div>
-          </div>
-        </ul>
-      </Project>
-      <Project
-        projectName={
-          <a
-            rel="noopener noreferrer"
-            className="nav-links"
-            target="_blank"
-            href="https://clothify.online/"
-          >
-            Clothify ecommerce
-          </a>
-        }
-        projectDesc={"Fullstack ecommerce app"}
-        img={
-          "https://res.cloudinary.com/clothify/image/upload/v1574208952/facebook-logo_biobli.png"
-        }
-        techUsed={"React, Node, MongoDB, Express, Bootstrap, Sass"}
-        linkCodeFront={"https://github.com/LeonMilosevic/ecommerce-front"}
-        backendLink={
-          <a
-            className="project-link"
-            rel="noopener noreferrer"
-            href="https://github.com/LeonMilosevic/ecommerce-back"
-            target="_blank"
-          >
-            code back-end
-          </a>
-        }
-        linkSite={"https://clothify.online/"}
-      >
-        <div className="row">
-          <div className="col-sm-12 col-md-6 col-lg-6">
-            <li>
-              <strong className="underline">Authentication</strong>:
-            </li>
-            <ul>
-              <li>email sign in, facebook sign in</li>
-              <li>forgot password option</li>
-            </ul>
-            <li>
-              <strong className="underline">User</strong>:
-            </li>
-            <ul>
-              <li>User dashboard</li>
-              <li>Purchase history</li>
-              <li>Test account: user@email.com, user123</li>
-            </ul>
-            <li>
-              <strong className="underline">Admin</strong>:
-            </li>
-            <ul>
-              <li>Admin Dashboard</li>
-              <li>order notification</li>
-              <li>Order managment</li>
-              <li>Test account: admin@email.com, admin123</li>
-            </ul>
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6">
-            <li>
-              <strong className="underline">Products</strong>:
-            </li>
-            <ul>
-              <li>Save favorite item</li>
-              <li>Cart checkout</li>
-              <li>Related products</li>
-              <li>Image zoom</li>
-              <li>Filtering</li>
-              <li>Products on sale</li>
-            </ul>
-            <li>
-              <strong className="underline">Payments:</strong>
-            </li>
-            <ul>
-              <li>Credit card and paypal payments </li>
-              <li>
-                Test card: any name, nu: 4111 1111 1111 1111, exp date:higher
-                than today{" "}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </Project>
-      <Project
-        projectName={
-          <a
-            rel="noopener noreferrer"
-            className="nav-links"
-            target="_blank"
-            href="https://eeetwell-calories.herokuapp.com/"
-          >
-            Calorie Calculator
-          </a>
-        }
-        projectDesc={"Heroku app Vanilla JS Calorie calculator"}
-        img={require("../../images/eeetwell_logo_mobile.jpg")}
-        techUsed={"Vanila JS, sass, material design"}
-        linkCodeFront={
-          "https://github.com/LeonMilosevic/eeetwell-diet-calculator"
-        }
-        linkSite={"https://eeetwell-calories.herokuapp.com/"}
-      >
-        <ul className="list-unstyled">
-          <div className="row">
-            <div className="col-12">
-              <h5>
-                <strong className="underline">
-                  Featuers and about the app
-                </strong>
-              </h5>
-              <p>
-                While I was working in Eeetwell company, a lot of people were
-                interested in knowing how much calories they are taking with
-                their meal. I have decided to build a calculator app that would
-                let them easily check that.
-              </p>
-            </div>
-          </div>
-        </ul>
-      </Project>
+      </div>
+      <div ref={(el) => (galleryRef = el)} className="projects-page-gallery">
+        <ProjectCard
+          header={"E-commerce"}
+          info={"React, Node"}
+          backgroundImage={clothifyImg}
+          ref={projectCard1}
+        />
+        <ProjectCard
+          header={"Transport app"}
+          info={"React, Node"}
+          backgroundImage={poolmeImg}
+          ref={projectCard2}
+        />
+        <ProjectCard
+          header={"E-commerce"}
+          info={"React, Java"}
+          backgroundImage={domasImg}
+          ref={projectCard3}
+        />
+        <ProjectCard
+          header={"Calculator"}
+          info={"Javascript"}
+          backgroundImage={eeetwellImg}
+          ref={projectCard4}
+        />
+      </div>
     </div>
   );
 };

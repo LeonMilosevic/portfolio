@@ -12,24 +12,19 @@ const LandingPage = (props) => {
   let headerText = useRef(null);
   let subHeaderText = useRef(null);
   let logo = useRef(null);
+  let nav = React.createRef(null);
   const history = useHistory();
 
   const changeFromHomeToAny = (destination) => (e) => {
     e.preventDefault();
     // pass parametars from home page elements to animate
-    changePageExitTransition(
-      logo,
-      document.querySelector(".nav"),
-      headerText,
-      subHeaderText
-    );
+    changePageExitTransition(logo, nav.current, headerText, subHeaderText);
     setTimeout(() => {
       history.push(destination);
     }, 1600);
   };
 
   useEffect(() => {
-    const nav = document.querySelector(".nav");
     let navTl = new gsap.timeline();
     let tl = new gsap.timeline();
 
@@ -48,9 +43,9 @@ const LandingPage = (props) => {
       xPercent: -70,
     });
 
-    navTl.to(nav, { opacity: 1, duration: 1, delay: 1.6, ease: Back });
+    navTl.to(nav.current, { opacity: 1, duration: 1, delay: 1.6, ease: Back });
     tl.to(logo, { opacity: 1, duration: 1, delay: 0.5, ease: Back });
-  }, []);
+  }, [nav]);
 
   return (
     <div className="container-fluid">
@@ -74,6 +69,7 @@ const LandingPage = (props) => {
         software developer
       </div>
       <Nav
+        ref={nav}
         changePageFromAnyPageToSkills={changeFromHomeToAny("/skills")}
         changePageFromAnyPageToProjects={changeFromHomeToAny("/projects")}
         changePageFromAnyPageToAbout={changeFromHomeToAny("/about")}

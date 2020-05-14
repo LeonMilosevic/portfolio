@@ -1,0 +1,52 @@
+.projects-page-header {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+
+  font-size: 32px;
+  font-weight: 700;
+  color: $green-text-color;
+
+  opacity: 0;
+  transform: translate(-50%, -150%);
+}
+
+// project card
+
+.projects-page-gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96%;
+  margin: 2% 0;
+
+  display: flex;
+
+  transform: translate(-50%, -50%);
+  &_card {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(0.21);
+    -webkit-filter: saturate(0.21);
+    width: 25%;
+    height: 250px;
+    background-color: red;
+    opacity: 0;
+    transform: translate(0%, 50%);
+    &__header {
+      position: relative;
+      top: 70%;
+      left: 10%;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    &__info {
+      position: relative;
+      top: 85%;
+      left: -30%;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}

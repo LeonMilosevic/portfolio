@@ -14,18 +14,13 @@ const About = () => {
   let textHeader = useRef(null);
   let text = useRef(null);
   let image = useRef(null);
+  let nav = React.createRef(null);
   const history = useHistory();
 
   const changeFromAboutToAny = (destination) => (e) => {
     e.preventDefault();
     // pass parametars from home page elements to animate
-    changePageExitTransition(
-      logo,
-      document.querySelector(".nav"),
-      textHeader,
-      text,
-      image
-    );
+    changePageExitTransition(logo, nav.current, textHeader, text, image);
     setTimeout(() => {
       history.push(destination);
     }, 1600);
@@ -35,7 +30,6 @@ const About = () => {
     const circle1 = document.querySelector(".loader_circle__circle_1");
     const circle2 = document.querySelector(".loader_circle__circle_2");
     const circle3 = document.querySelector(".loader_circle__circle_3");
-    const nav = document.querySelector(".nav");
 
     const tl = new gsap.timeline();
 
@@ -63,11 +57,12 @@ const About = () => {
       xPercent: 50,
     });
     gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
-    gsap.to(nav, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
-  }, []);
+    gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
+  }, [nav]);
   return (
     <div className="container my-3">
       <Nav
+        ref={nav}
         changePageFromAnyPageToSkills={changeFromAboutToAny("/skills")}
         changePageFromAnyPageToProjects={changeFromAboutToAny("/projects")}
         changePageFromAnyPageToContact={changeFromAboutToAny("/contact")}
@@ -96,10 +91,10 @@ const About = () => {
             About me
           </h6>
           <p className="about-page_text-text" ref={(el) => (text = el)}>
-            I am a web developer who loves coding, enjoys learning and
-            exploring. My main goal is to work on products that are changing the
-            world or making your everyday easier. I have competitive nature, I’m
-            always seeking for more, I enjoy overcoming challenges.
+            I am a software developer who loves coding, enjoys learning and
+            exploring. My main goal is to work on products that are interesting
+            and helping users in any way. I have competitive nature, I’m always
+            seeking for more, I enjoy overcoming challenges.
           </p>
         </div>
       </div>

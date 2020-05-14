@@ -16,6 +16,7 @@ const Contact = () => {
   let email = useRef(null);
   let phone = useRef(null);
   let github = useRef(null);
+  let nav = React.createRef(null);
   const history = useHistory();
 
   const changeFromContactToAny = (destination) => (e) => {
@@ -23,7 +24,7 @@ const Contact = () => {
     // pass parametars from home page elements to animate
     changePageExitTransition(
       logo,
-      document.querySelector(".nav"),
+      nav.current,
       header,
       name,
       email,
@@ -39,7 +40,6 @@ const Contact = () => {
     const circle1 = document.querySelector(".loader_circle__circle_1");
     const circle2 = document.querySelector(".loader_circle__circle_2");
     const circle3 = document.querySelector(".loader_circle__circle_3");
-    const nav = document.querySelector(".nav");
 
     const tl = new gsap.timeline();
 
@@ -79,8 +79,8 @@ const Contact = () => {
       yPercent: -20,
     });
     gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
-    gsap.to(nav, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
-  }, []);
+    gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
+  }, [nav]);
 
   return (
     <div className="container my-3">
@@ -93,6 +93,7 @@ const Contact = () => {
         <Logo changePageFromAnyPageToHome={changeFromContactToAny("/")} />
       </div>
       <Nav
+        ref={nav}
         changePageFromAnyPageToSkills={changeFromContactToAny("/skills")}
         changePageFromAnyPageToProjects={changeFromContactToAny("/projects")}
         changePageFromAnyPageToAbout={changeFromContactToAny("/about")}
