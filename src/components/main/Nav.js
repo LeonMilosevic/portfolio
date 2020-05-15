@@ -7,7 +7,7 @@ const Nav = React.forwardRef((props, ref) => {
     <div ref={ref} className="nav">
       <div className="nav_links">
         <NavLink
-          onfocus="this.blur()"
+          onFocus={() => "this.blur()"}
           to="/skills"
           onClick={props.changePageFromAnyPageToSkills}
           activeClassName="selected"
@@ -18,6 +18,7 @@ const Nav = React.forwardRef((props, ref) => {
       </div>
       <div className="nav_links">
         <NavLink
+          onFocus={() => "this.blur()"}
           to="/projects"
           onClick={props.changePageFromAnyPageToProjects}
           activeClassName="selected"
@@ -28,6 +29,7 @@ const Nav = React.forwardRef((props, ref) => {
       </div>
       <div className="nav_links">
         <NavLink
+          onFocus={() => "this.blur()"}
           to="/about"
           className="nav_link"
           activeClassName="selected"
@@ -38,6 +40,7 @@ const Nav = React.forwardRef((props, ref) => {
       </div>
       <div className="nav_links">
         <NavLink
+          onFocus={() => "this.blur()"}
           to="/contact"
           onClick={props.changePageFromAnyPageToContact}
           activeClassName="selected"

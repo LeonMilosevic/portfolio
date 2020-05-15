@@ -87,7 +87,6 @@ const Projects = () => {
 
     gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2.2 });
     gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2.2 });
-    console.log("called use effect");
   }, [projectCard1, projectCard2, projectCard3, projectCard4, nav]);
   return (
     <div className="container my-3">
@@ -114,24 +113,28 @@ const Projects = () => {
           info={"React, Node"}
           backgroundImage={clothifyImg}
           ref={projectCard1}
+          bgColor={"#289FFD"}
         />
         <ProjectCard
-          header={"Transport app"}
+          header={"Car-share"}
           info={"React, Node"}
           backgroundImage={poolmeImg}
           ref={projectCard2}
+          bgColor={"#12B890"}
         />
         <ProjectCard
           header={"E-commerce"}
           info={"React, Java"}
           backgroundImage={domasImg}
           ref={projectCard3}
+          bgColor={"#C529D4"}
         />
         <ProjectCard
           header={"Calculator"}
           info={"Javascript"}
           backgroundImage={eeetwellImg}
           ref={projectCard4}
+          bgColor={"#c2ab16"}
         />
       </div>
     </div>
