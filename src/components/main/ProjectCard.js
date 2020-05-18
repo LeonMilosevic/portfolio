@@ -54,13 +54,13 @@ const ProjectCard = React.forwardRef((props, ref) => {
         ref={(el) => (headerRef = el)}
         className="projects-page-gallery_card__header"
       >
-        {props.header}
+        {props.title}
       </span>
       <span
         ref={(el) => (infoRef = el)}
         className="projects-page-gallery_card__info"
       >
-        {props.info}
+        {props.titleDescription}
       </span>
       <div
         style={{ backgroundColor: props.bgColor }}
@@ -71,7 +71,14 @@ const ProjectCard = React.forwardRef((props, ref) => {
         ref={(el) => (detailsRef = el)}
         className="project-card--btn project-card--btn_1"
       >
-        <Link className="project-card--btn__link" to="/">
+        <Link
+          className="project-card--btn__link"
+          to={{
+            pathname: `/project/${props.projectId}`,
+            state: props.projectForward,
+          }}
+          onClick={props.onClickFunction}
+        >
           View Details
         </Link>
       </span>
@@ -79,7 +86,7 @@ const ProjectCard = React.forwardRef((props, ref) => {
         ref={(el) => (websiteRef = el)}
         className="project-card--btn project-card--btn_2"
       >
-        <Link className="project-card--btn__link" to="/">
+        <Link className="project-card--btn__link" to={props.linkWebsite}>
           View Website
         </Link>
       </span>

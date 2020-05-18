@@ -1,44 +1,15 @@
 import { gsap, Back } from "gsap";
 import React from "react";
 
-export const changePageExitTransition = (
-  elem1,
-  elem2,
-  elem3,
-  elem4,
-  elem5,
-  elem6,
-  elem7
-) => {
+const spinCircles = () => {
   const circle1 = document.querySelector(".loader_circle__circle_1");
   const circle2 = document.querySelector(".loader_circle__circle_2");
   const circle3 = document.querySelector(".loader_circle__circle_3");
 
-  /* declaring timelines for elements because of timelines overlap,
-     so more elements could be selected at the same time */
-
   let exitCircle1Tl = new gsap.timeline();
   let exitCircle2Tl = new gsap.timeline();
   let exitCircle3Tl = new gsap.timeline();
-  let elem1Tl = new gsap.timeline();
-  let elem2Tl = new gsap.timeline();
-  let elem3Tl = new gsap.timeline();
-  let elem4Tl = new gsap.timeline();
-  let elem5Tl = new gsap.timeline();
-  let elem6Tl = new gsap.timeline();
-  let elem7Tl = new gsap.timeline();
 
-  elem1Tl.to(elem1, { opacity: 0, duration: 0.2, ease: Back });
-  elem2Tl.to(elem2, { opacity: 0, duration: 0.2, ease: Back });
-  elem3Tl.to(elem3, {
-    opacity: 0,
-    duration: 0.2,
-    ease: Back,
-  });
-  elem4Tl.to(elem4, { opacity: 0, duration: 0.2, ease: Back });
-  elem5Tl.to(elem5, { opacity: 0, duration: 0.2, ease: Back });
-  elem6Tl.to(elem6, { opacity: 0, duration: 0.2, ease: Back });
-  elem7Tl.to(elem7, { opacity: 0, duration: 0.2, ease: Back });
   // first circle spin
   exitCircle1Tl.to(circle1, {
     opacity: 1,
@@ -132,6 +103,51 @@ export const changePageExitTransition = (
     delay: 0.1,
     ease: Back,
   });
+};
+
+export const fadeOutElements = (
+  elem1,
+  elem2,
+  elem3,
+  elem4,
+  elem5,
+  elem6,
+  elem7
+) => {
+  /* declaring timelines for elements because of timelines overlap,
+     so more elements could be selected at the same time */
+  let elem1Tl = new gsap.timeline();
+  let elem2Tl = new gsap.timeline();
+  let elem3Tl = new gsap.timeline();
+  let elem4Tl = new gsap.timeline();
+  let elem5Tl = new gsap.timeline();
+  let elem6Tl = new gsap.timeline();
+  let elem7Tl = new gsap.timeline();
+
+  elem1Tl.to(elem1, { opacity: 0, duration: 0.2, ease: Back });
+  elem2Tl.to(elem2, { opacity: 0, duration: 0.2, ease: Back });
+  elem3Tl.to(elem3, {
+    opacity: 0,
+    duration: 0.2,
+    ease: Back,
+  });
+  elem4Tl.to(elem4, { opacity: 0, duration: 0.2, ease: Back });
+  elem5Tl.to(elem5, { opacity: 0, duration: 0.2, ease: Back });
+  elem6Tl.to(elem6, { opacity: 0, duration: 0.2, ease: Back });
+  elem7Tl.to(elem7, { opacity: 0, duration: 0.2, ease: Back });
+};
+
+export const changePageExitTransition = (
+  elem1,
+  elem2,
+  elem3,
+  elem4,
+  elem5,
+  elem6,
+  elem7
+) => {
+  fadeOutElements(elem1, elem2, elem3, elem4, elem5, elem6, elem7);
+  spinCircles();
 };
 
 export function useCombinedRefs(...refs) {

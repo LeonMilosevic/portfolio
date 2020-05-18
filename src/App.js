@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 // import router
 import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "./components/main/Routes";
+import Routes from "./components/Routes/Routes";
 import LoaderScreen from "./components/main/LoadingScreen";
 
 const App = () => {
