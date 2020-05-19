@@ -5,6 +5,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 const Close = (props) => {
   return (
     <Link
+      to="/projects"
       className="single-project-close_icon"
       onClick={props.backToProjectsPage}
     >

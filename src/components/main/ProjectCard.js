@@ -86,9 +86,14 @@ const ProjectCard = React.forwardRef((props, ref) => {
         ref={(el) => (websiteRef = el)}
         className="project-card--btn project-card--btn_2"
       >
-        <Link className="project-card--btn__link" to={props.linkWebsite}>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          className="project-card--btn__link"
+          href={props.linkWebsite}
+        >
           View Website
-        </Link>
+        </a>
       </span>
     </div>
   );

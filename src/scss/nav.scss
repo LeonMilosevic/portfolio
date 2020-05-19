@@ -4,10 +4,20 @@
   right: 3%;
   display: flex;
   opacity: 0;
+  @media (max-width: $screen-max-phone) {
+    top: 2%;
+    right: 0;
+  }
 }
 
 .nav_links {
   margin: 0 20px;
+  @media (min-width: $screen-min-bigdesktop) {
+    margin: 0 30px;
+  }
+  @media (max-width: $screen-max-phone) {
+    margin: 0 15px;
+  }
 }
 
 .nav_link {
@@ -44,6 +54,12 @@
   &:active {
     text-decoration: none;
     color: $main-text-color;
+  }
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 24px;
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 12px;
   }
 }
 .selected {

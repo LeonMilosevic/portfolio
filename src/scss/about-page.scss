@@ -4,16 +4,40 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    display: block;
+    text-align: center;
+  }
 }
 .about-page-img_wrapper {
   position: relative;
   transform: translate(-53%, 0);
   opacity: 0;
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    text-align: center;
+    transform: translate(-51%, 100%);
+  }
 }
 
 .about-page-img_img {
   width: 200px;
   height: 200px;
+  @media (min-width: $screen-min-bigdesktop) {
+    height: 220px;
+    width: 220px;
+  }
+  @media (max-width: $screen-max-phone) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .about-page_text {
@@ -22,6 +46,15 @@
     width: 400px;
     text-align: center;
     transform: translate(5%, 0%);
+    @media (min-width: $screen-min-bigdesktop) {
+      width: 500px;
+    }
+    @media (max-width: $screen-max-tablet) {
+    }
+    @media (max-width: $screen-max-phone) {
+      transform: translate(0%, -150%);
+      width: 300px;
+    }
   }
   &-header {
     font-size: 20px;
@@ -29,9 +62,23 @@
     color: $green-text-color;
     opacity: 0;
     transform: translate(0%, -100%);
+    @media (min-width: $screen-min-bigdesktop) {
+      font-size: 24px;
+    }
+    @media (max-width: $screen-max-tablet) {
+    }
+    @media (max-width: $screen-max-phone) {
+      font-size: 14px;
+    }
   }
   &-text {
     opacity: 0;
     transform: translate(0%, 60%);
+    @media (min-width: $screen-min-bigdesktop) {
+      font-size: 22px;
+    }
+    @media (max-width: $screen-max-phone) {
+      font-size: 12px;
+    }
   }
 }

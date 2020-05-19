@@ -27,6 +27,18 @@
   left: 50%;
   transform: translate(-50%, -70%);
   opacity: 0;
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 90px;
+    letter-spacing: 12px;
+  }
+  @media (max-width: $screen-max-tablet) {
+    font-size: 50px;
+    letter-spacing: 8px;
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 20px;
+    letter-spacing: 7px;
+  }
 }
 .landing-page_subheader-text {
   font-size: 16px;
@@ -40,6 +52,19 @@
   left: 50%;
   transform: translate(120%, 140%);
   opacity: 0;
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  @media (max-width: $screen-max-tablet) {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 8px;
+    letter-spacing: 1px;
+    transform: translate(85%, 140%);
+  }
 }
 
 /* logo */
@@ -52,4 +77,18 @@
   width: 15px;
   height: 20px;
   opacity: 0;
+  @media (min-width: $screen-min-bigdesktop) {
+    width: 22px;
+    height: 27px;
+  }
+  @media (max-width: $screen-max-tablet) {
+    width: 12px;
+    height: 17px;
+  }
+  @media (max-width: $screen-max-phone) {
+    top: 2%;
+    left: 5%;
+    width: 10px;
+    height: 15px;
+  }
 }

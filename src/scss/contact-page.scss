@@ -12,6 +12,12 @@
   transform: translate(0%, -180%);
   color: $green-text-color;
   opacity: 0;
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 52px;
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 28px;
+  }
 }
 
 .contact-page_contact-info_wrapper {
@@ -19,6 +25,14 @@
   font-weight: 700;
   line-height: 45px;
   transform: translate(0%, -20%);
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 32px;
+    line-height: 70px;
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 14px;
+    line-height: 35px;
+  }
 }
 
 .contact-page_contact-info_name {
@@ -28,6 +42,9 @@
 .contact-page_contact-info_email {
   opacity: 0;
   transform: translate(0%, 20%);
+  @media (max-width: $screen-max-phone) {
+    white-space: nowrap;
+  }
 }
 .contact-page_contact-info_phone {
   transform: translate(0%, 20%);

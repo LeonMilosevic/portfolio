@@ -122,10 +122,20 @@ const ProjectSingle = (props) => {
                 {item.title}
               </div>
             </div>
-            <div className="single-project-underheader-wrapper">
+            <div
+              className={
+                item.techStack.length <= 6
+                  ? "single-project-underheader-wrapper-small"
+                  : "single-project-underheader-wrapper"
+              }
+            >
               <div
                 ref={(el) => (techStackRef = el)}
-                className="single-project-underheader"
+                className={
+                  item.techStack.length <= 6
+                    ? "single-project-underheader-small"
+                    : "single-project-underheader"
+                }
               >
                 {item.techStack.join(", ")}
               </div>

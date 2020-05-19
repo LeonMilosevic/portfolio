@@ -10,7 +10,7 @@ const Dots = (props) => {
         className={`loader_circle loader_circle__circle_1 ${props.extraClassCirlcle1}`}
       >
         <img
-          style={{ height: "150px", width: "150px" }}
+          className="loader-page_circle-size"
           src={Circle1}
           alt="Loading Circle"
         />
@@ -19,7 +19,7 @@ const Dots = (props) => {
         className={`loader_circle loader_circle__circle_2 ${props.extraClassCirlcle2}`}
       >
         <img
-          style={{ height: "150px", width: "150px" }}
+          className="loader-page_circle-size"
           src={Circle2}
           alt="Loading Circle"
         />
@@ -28,7 +28,7 @@ const Dots = (props) => {
         className={`loader_circle loader_circle__circle_3 ${props.extraClassCirlcle3}`}
       >
         <img
-          style={{ height: "150px", width: "150px" }}
+          className="loader-page_circle-size"
           src={Circle3}
           alt="Loading Circle"
         />

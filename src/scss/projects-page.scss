@@ -9,6 +9,15 @@
 
   opacity: 0;
   transform: translate(-50%, -150%);
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 42px;
+  }
+  @media (max-width: $screen-max-tablet) {
+    display: none;
+  }
+  @media (max-width: $screen-max-phone) {
+    display: none;
+  }
 }
 
 // project card
@@ -23,6 +32,20 @@
   display: flex;
 
   transform: translate(-50%, -50%);
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+    display: block;
+    height: 50px;
+    width: 70%;
+    top: 10%;
+  }
+  @media (max-width: $screen-max-phone) {
+    display: block;
+    height: 50px;
+    width: 100%;
+    top: 10%;
+  }
   &_card {
     background-position: top;
     background-repeat: no-repeat;
@@ -111,9 +134,15 @@
 }
 .single-project-main {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 15%;
   width: 50%;
+  @media (max-width: $screen-max-phone) {
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    position: relative;
+  }
 }
 .single-project-header-wrapper {
   overflow: hidden;
@@ -135,17 +164,52 @@
   font-weight: 400;
   font-style: italic;
   transform: translate(0, 100%);
+  @media (min-width: $screen-min-bigdesktop) {
+    font-size: 26px;
+  }
 }
-.single-project-underheader-wrapper {
+
+.single-project-underheader-wrapper-small {
   height: 26px;
   margin: 5% 0 0 10%;
   overflow: hidden;
+  @media (max-width: $screen-max-phone) {
+    height: 14px;
+  }
 }
+
+.single-project-underheader-small {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  transform: translate(0, 90%);
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 10px;
+  }
+}
+
+.single-project-underheader-wrapper {
+  height: 50px;
+  margin: 5% 0 0 10%;
+  overflow: hidden;
+}
+
 .single-project-underheader {
   font-size: 18px;
   font-weight: 700;
   color: black;
   transform: translate(0, 90%);
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 12px;
+  }
 }
 
 .single-project-description {
@@ -158,6 +222,13 @@
   }
   opacity: 0;
   transform: translate(0, 10%);
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    font-size: 10px;
+  }
 }
 
 .single-project-image-container {
@@ -166,11 +237,26 @@
   right: 5%;
   opacity: 0;
   transform: translate(10%, 0);
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    top: 70%;
+    right: 35%;
+  }
 }
 
 .single-project-image_img {
   object-fit: contain;
   border-radius: 10px;
+  @media (min-width: $screen-min-bigdesktop) {
+  }
+  @media (max-width: $screen-max-tablet) {
+  }
+  @media (max-width: $screen-max-phone) {
+    display: none;
+  }
 }
 
 .single-project-links {
