@@ -202,6 +202,23 @@
   }
 }
 
+.single-project-close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  opacity: 0;
+  &_icon {
+    color: $main-text-color;
+    font-size: 42px;
+    &:link {
+      color: $main-text-color;
+    }
+    &:hover {
+      color: $main-text-color;
+    }
+  }
+}
+
 .exit-div {
   position: absolute;
   z-index: 10;

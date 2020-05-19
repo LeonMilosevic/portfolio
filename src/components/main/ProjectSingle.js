@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import Close from "../ui/Close";
 // import third party
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 
 const ProjectSingle = (props) => {
@@ -10,9 +11,13 @@ const ProjectSingle = (props) => {
   let techStackRef = useRef(null);
   let descriptionRef = useRef(null);
   let imageRef = useRef(null);
+  let containerRef = useRef(null);
   let link1 = useRef(null);
   let link2 = useRef(null);
   let link3 = useRef(null);
+  let closeRef = useRef(null);
+  let tl = new gsap.timeline();
+  const history = useHistory();
 
   const changeColor = (link) => {
     link.style.color = item.bgColor;
@@ -22,49 +27,84 @@ const ProjectSingle = (props) => {
     link.style.color = "#ffffff";
   };
 
+  const backToProjectsPage = (destination) => (e) => {
+    e.preventDefault();
+    tl.reverse();
+    gsap.to(containerRef, {
+      position: "fixed",
+      bottom: 0,
+      height: "0vh",
+      duration: 0.2,
+      delay: 2.5,
+    });
+    setTimeout(() => {
+      history.push(destination);
+    }, 2700);
+  };
+
   useEffect(() => {
     setItem(props.location.state);
   }, [props.location.state]);
 
   useEffect(() => {
     if (item !== undefined) {
-      gsap.to(subTitleRef, {
-        yPercent: -100,
-        duration: 0.4,
-        delay: 0.5,
-      });
-      gsap.to(titleRef, {
-        yPercent: -90,
-        duration: 0.4,
-        delay: 0.5,
-      });
-      gsap.to(techStackRef, {
-        yPercent: -90,
-        duration: 0.4,
-        delay: 0.5,
-      });
-      gsap.to(descriptionRef, {
-        yPercent: -10,
-        duration: 0.4,
-        delay: 1,
-        opacity: 1,
-      });
-      gsap.to(imageRef, {
-        opacity: 1,
-        duration: 0.7,
-        delay: 1.4,
-        xPercent: -10,
-      });
+      tl.addLabel("sameStartHeaders");
+
+      tl.to(
+        subTitleRef,
+        {
+          yPercent: -100,
+          duration: 0.4,
+          delay: 0.5,
+        },
+        "sameStartHeaders"
+      )
+        .to(
+          titleRef,
+          {
+            yPercent: -90,
+            duration: 0.4,
+            delay: 0.5,
+          },
+          "sameStartHeaders"
+        )
+        .to(
+          techStackRef,
+          {
+            yPercent: -90,
+            duration: 0.4,
+            delay: 0.5,
+          },
+          "sameStartHeaders"
+        )
+        .to(descriptionRef, {
+          yPercent: -10,
+          duration: 0.4,
+          opacity: 1,
+        })
+        .to(imageRef, {
+          opacity: 1,
+          duration: 0.7,
+          xPercent: -10,
+        })
+        .to(closeRef, {
+          opacity: 1,
+          duration: 0.7,
+        });
     }
-  }, [item]);
+  }, [tl, item]);
 
   return (
     <>
       {item !== undefined && (
         <div
+          ref={(el) => (containerRef = el)}
           style={{ backgroundColor: item.bgColor }}
           className="container-fluid singe-project-container"
         >
+          <div ref={(el) => (closeRef = el)} className="single-project-close">
+            <Close backToProjectsPage={backToProjectsPage("/projects")} />
+          </div>
           <div className="single-project-main">
             <div className="single-project-subheader-wrapper">
               <div
