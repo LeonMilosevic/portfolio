@@ -7,7 +7,11 @@ import Logo from "../ui/Logo";
 import Dots from "../ui/Dots";
 import Nav from "../main/Nav";
 // imoprt helpers
-import { changePageExitTransition } from "../ui/Helpers";
+import {
+  changePageExitTransition,
+  reduceCircleOpacity,
+  fadeOutLogoNav,
+} from "../ui/Helpers";
 
 const About = () => {
   let logo = useRef(null);
@@ -27,15 +31,9 @@ const About = () => {
   };
 
   useEffect(() => {
-    const circle1 = document.querySelector(".loader_circle__circle_1");
-    const circle2 = document.querySelector(".loader_circle__circle_2");
-    const circle3 = document.querySelector(".loader_circle__circle_3");
+    reduceCircleOpacity();
 
     const tl = new gsap.timeline();
-
-    gsap.to(circle1, { opacity: 0.15, duration: 0.9, ease: Back });
-    gsap.to(circle2, { opacity: 0.15, duration: 0.9, ease: Back });
-    gsap.to(circle3, { opacity: 0.15, duration: 0.9, ease: Back });
 
     tl.to(textHeader, {
       opacity: 1,
@@ -56,8 +54,7 @@ const About = () => {
       ease: Back,
       xPercent: 50,
     });
-    gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
-    gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
+    fadeOutLogoNav(logo, nav.current);
   }, [nav]);
   return (
     <div className="container my-3">

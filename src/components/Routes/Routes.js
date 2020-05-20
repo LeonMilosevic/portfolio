@@ -5,9 +5,9 @@ import Home from "../main/Home";
 import About from "../main/About";
 import Contact from "../main/Contact";
 import Projects from "../main/Projects";
-import ProjectsOld from "../main/ProjectsOld";
 import Skills from "../main/Skills";
 import ProjectSingle from "../main/ProjectSingle";
+import NotFound from "../main/NotFound";
 
 const Routes = () => {
   return (
@@ -17,8 +17,8 @@ const Routes = () => {
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/projects" component={Projects} />
       <Route exact path="/project/:id" component={ProjectSingle} />
-      <Route exact path="/projectsold" component={ProjectsOld} />
       <Route exact path="/skills" component={Skills} />
+      <Route component={NotFound} />
     </Switch>
   );
 };

@@ -7,7 +7,11 @@ import Logo from "../ui/Logo";
 import Dots from "../ui/Dots";
 import Nav from "../main/Nav";
 // imoprt helpers
-import { changePageExitTransition } from "../ui/Helpers";
+import {
+  changePageExitTransition,
+  reduceCircleOpacity,
+  fadeOutLogoNav,
+} from "../ui/Helpers";
 
 const Skills = () => {
   let logo = useRef(null);
@@ -41,13 +45,7 @@ const Skills = () => {
   };
 
   useEffect(() => {
-    const circle1 = document.querySelector(".loader_circle__circle_1");
-    const circle2 = document.querySelector(".loader_circle__circle_2");
-    const circle3 = document.querySelector(".loader_circle__circle_3");
-
-    gsap.to(circle1, { opacity: 0.15, duration: 0.9, ease: Back });
-    gsap.to(circle2, { opacity: 0.15, duration: 0.9, ease: Back });
-    gsap.to(circle3, { opacity: 0.15, duration: 0.9, ease: Back });
+    reduceCircleOpacity();
 
     // timeline for animations of skill sets
     const tlFrontEndElements = new gsap.timeline();
@@ -144,8 +142,7 @@ const Skills = () => {
       yPercent: -20,
     });
 
-    gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
-    gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
+    fadeOutLogoNav(logo, nav.current);
   }, [nav]);
   return (
     <div className="container my-3">

@@ -167,3 +167,18 @@ export function useCombinedRefs(...refs) {
 
   return targetRef;
 }
+
+export const reduceCircleOpacity = () => {
+  const circle1 = document.querySelector(".loader_circle__circle_1");
+  const circle2 = document.querySelector(".loader_circle__circle_2");
+  const circle3 = document.querySelector(".loader_circle__circle_3");
+
+  gsap.to(circle1, { opacity: 0.15, duration: 0.9, ease: Back });
+  gsap.to(circle2, { opacity: 0.15, duration: 0.9, ease: Back });
+  gsap.to(circle3, { opacity: 0.15, duration: 0.9, ease: Back });
+};
+
+export const fadeOutLogoNav = (logo, nav) => {
+  gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
+  gsap.to(nav, { opacity: 1, duration: 0.8, ease: Back, delay: 2 });
+};

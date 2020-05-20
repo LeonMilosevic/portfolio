@@ -32,8 +32,6 @@
   display: flex;
 
   transform: translate(-50%, -50%);
-  @media (min-width: $screen-min-bigdesktop) {
-  }
   @media (max-width: $screen-max-tablet) {
     display: block;
     height: 50px;
@@ -183,10 +181,6 @@
   font-weight: 700;
   color: black;
   transform: translate(0, 90%);
-  @media (min-width: $screen-min-bigdesktop) {
-  }
-  @media (max-width: $screen-max-tablet) {
-  }
   @media (max-width: $screen-max-phone) {
     font-size: 10px;
   }
@@ -203,10 +197,6 @@
   font-weight: 700;
   color: black;
   transform: translate(0, 90%);
-  @media (min-width: $screen-min-bigdesktop) {
-  }
-  @media (max-width: $screen-max-tablet) {
-  }
   @media (max-width: $screen-max-phone) {
     font-size: 12px;
   }
@@ -222,10 +212,6 @@
   }
   opacity: 0;
   transform: translate(0, 10%);
-  @media (min-width: $screen-min-bigdesktop) {
-  }
-  @media (max-width: $screen-max-tablet) {
-  }
   @media (max-width: $screen-max-phone) {
     font-size: 10px;
   }
@@ -237,10 +223,6 @@
   right: 5%;
   opacity: 0;
   transform: translate(10%, 0);
-  @media (min-width: $screen-min-bigdesktop) {
-  }
-  @media (max-width: $screen-max-tablet) {
-  }
   @media (max-width: $screen-max-phone) {
     top: 70%;
     right: 35%;
@@ -250,10 +232,6 @@
 .single-project-image_img {
   object-fit: contain;
   border-radius: 10px;
-  @media (min-width: $screen-min-bigdesktop) {
-  }
-  @media (max-width: $screen-max-tablet) {
-  }
   @media (max-width: $screen-max-phone) {
     display: none;
   }

@@ -7,7 +7,12 @@ import Logo from "../ui/Logo";
 import Dots from "../ui/Dots";
 import Nav from "../main/Nav";
 // imoprt helpers
-import { changePageExitTransition, fadeOutElements } from "../ui/Helpers";
+import {
+  changePageExitTransition,
+  fadeOutElements,
+  reduceCircleOpacity,
+  fadeOutLogoNav,
+} from "../ui/Helpers";
 import { projectsApi } from "../data";
 import ProjectCard from "./ProjectCard";
 
@@ -57,15 +62,8 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    const circle1 = document.querySelector(".loader_circle__circle_1");
-    const circle2 = document.querySelector(".loader_circle__circle_2");
-    const circle3 = document.querySelector(".loader_circle__circle_3");
-
+    reduceCircleOpacity();
     const tl = new gsap.timeline();
-
-    gsap.to(circle1, { opacity: 0.15, duration: 0.9, ease: Back });
-    gsap.to(circle2, { opacity: 0.15, duration: 0.9, ease: Back });
-    gsap.to(circle3, { opacity: 0.15, duration: 0.9, ease: Back });
 
     tl.to(header, {
       opacity: 1,
@@ -100,8 +98,7 @@ const Projects = () => {
       ease: Back,
     });
 
-    gsap.to(logo, { opacity: 1, duration: 0.8, ease: Back, delay: 2.2 });
-    gsap.to(nav.current, { opacity: 1, duration: 0.8, ease: Back, delay: 2.2 });
+    fadeOutLogoNav(logo, nav.current);
   }, [projectCard1, projectCard2, projectCard3, projectCard4, nav]);
   return (
     <>

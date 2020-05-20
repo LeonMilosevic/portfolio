@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Close from "../ui/Close";
 // import third party
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 
 const ProjectSingle = (props) => {
@@ -161,37 +161,43 @@ const ProjectSingle = (props) => {
             />
             <div className="single-project-links">
               <div>
-                <Link
+                <a
                   ref={(el) => (link1 = el)}
                   className="single-project-link"
-                  to={item.linkWebsite}
+                  href={item.linkWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => changeColor(link1)}
                   onMouseLeave={() => changeColorBack(link1)}
                 >
                   Website Live
-                </Link>
+                </a>
               </div>
               <div>
-                <Link
+                <a
                   ref={(el) => (link2 = el)}
                   className="single-project-link"
-                  to={item.linkCodeFront}
+                  href={item.linkCodeFront}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => changeColor(link2)}
                   onMouseLeave={() => changeColorBack(link2)}
                 >
                   Frontend Code
-                </Link>
+                </a>
               </div>
               <div>
-                <Link
+                <a
                   ref={(el) => (link3 = el)}
                   className="single-project-link"
-                  to={item.linkCodeBack}
+                  href={item.linkCodeBack}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onMouseEnter={() => changeColor(link3)}
                   onMouseLeave={() => changeColorBack(link3)}
                 >
                   Backend Code
-                </Link>
+                </a>
               </div>
             </div>
           </div>

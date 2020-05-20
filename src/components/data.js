@@ -58,26 +58,16 @@ export const projectsApi = [
   },
   {
     id: 2,
-    title: "Topos Centras",
-    titleDescription: "E-commerce",
-    techStack: [
-      "React",
-      "Javascript",
-      "Java",
-      "Spring-boot, Spring, Hibernate",
-      "Sass",
-      "Gsap",
-      "MySQL",
-      "Material-UI",
-    ],
-    linkCodeFront: "#!",
+    title: "Animations",
+    titleDescription: "Practice",
+    techStack: ["React", "Javascript", "Sass", "Gsap", "Material-UI"],
+    linkCodeFront: "https://trusting-hugle-827790.netlify.app/",
     linkCodeBack: "#!",
     linkWebsite: "#!",
     backgroundImg: domasImg,
     cardImg: work,
     bgColor: "#C529D4",
-    description: `Client website for a frame shop. Search filters, online shopping, order conformation and print receipt.
-    Admin managment page for products, categories and order updates. Direct facebook messanger feature. Authentiaction features with facebook login.
+    description: `Worked on animations to practice with GSAP library and transition from page to page
     `,
   },
   {
