@@ -186,19 +186,23 @@ const ProjectSingle = (props) => {
                   Frontend Code
                 </a>
               </div>
-              <div>
-                <a
-                  ref={(el) => (link3 = el)}
-                  className="single-project-link"
-                  href={item.linkCodeBack}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseEnter={() => changeColor(link3)}
-                  onMouseLeave={() => changeColorBack(link3)}
-                >
-                  Backend Code
-                </a>
-              </div>
+              {item.linkCodeBack !== "no" ? (
+                <div>
+                  <a
+                    ref={(el) => (link3 = el)}
+                    className="single-project-link"
+                    href={item.linkCodeBack}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={() => changeColor(link3)}
+                    onMouseLeave={() => changeColorBack(link3)}
+                  >
+                    Backend Code
+                  </a>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
