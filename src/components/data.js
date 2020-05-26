@@ -11,23 +11,6 @@ import work from "../images/work.jpg";
 export const projectsApi = [
   {
     id: 0,
-    title: "Clothify",
-    titleDescription: "E-commerce",
-    techStack: ["React", "Node", "Javascript", "Sass", "MongoDB", "Bootstrap"],
-    linkCodeFront: "https://github.com/LeonMilosevic/ecommerce-front",
-    linkCodeBack: "https://github.com/LeonMilosevic/ecommerce-back",
-    linkWebsite: "https://clothify.online/",
-    backgroundImg: clothifyImg,
-    cardImg: shopping,
-    bgColor: "#289FFD",
-    description: `An e-commerce app with authentiaction register/login with forgot password feature.
-     Admin management page with create, delete and update operations on products, categories, 
-     shippments, and users. Email notification when a new order is created. 
-     There are filters for searching on clients shopping page with cart and wishlist. 
-     Buying option only when signed in with credit card or paypal system`,
-  },
-  {
-    id: 1,
     title: "Car-share",
     titleDescription: "Connect app",
     techStack: [
@@ -57,7 +40,7 @@ export const projectsApi = [
       create an account and be logged in.`,
   },
   {
-    id: 2,
+    id: 1,
     title: "Animations",
     titleDescription: "Practice",
     techStack: ["React", "Javascript", "Sass", "Gsap", "Material-UI"],
@@ -69,6 +52,23 @@ export const projectsApi = [
     bgColor: "#C529D4",
     description: `Worked on animations to practice with GSAP library and transition from page to page
     `,
+  },
+  {
+    id: 2,
+    title: "Clothify",
+    titleDescription: "E-commerce",
+    techStack: ["React", "Node", "Javascript", "Sass", "MongoDB", "Bootstrap"],
+    linkCodeFront: "https://github.com/LeonMilosevic/ecommerce-front",
+    linkCodeBack: "https://github.com/LeonMilosevic/ecommerce-back",
+    linkWebsite: "https://clothify.online/",
+    backgroundImg: clothifyImg,
+    cardImg: shopping,
+    bgColor: "#289FFD",
+    description: `An e-commerce app with authentiaction register/login with forgot password feature.
+     Admin management page with create, delete and update operations on products, categories, 
+     shippments, and users. Email notification when a new order is created. 
+     There are filters for searching on clients shopping page with cart and wishlist. 
+     Buying option only when signed in with credit card or paypal system`,
   },
   {
     id: 3,

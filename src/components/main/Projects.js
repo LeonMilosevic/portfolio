@@ -62,6 +62,7 @@ const Projects = () => {
   };
 
   useEffect(() => {
+    console.log("hello project");
     reduceCircleOpacity();
     const tl = new gsap.timeline();
 
