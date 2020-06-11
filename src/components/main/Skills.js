@@ -18,20 +18,6 @@ const Skills = () => {
   let nav = React.createRef(null);
   let frontEndUl = useRef(null);
   let backEndUl = useRef(null);
-  let frontEndEl = useRef(null);
-  let backEndEl = useRef(null);
-  let reactEl = useRef(null);
-  let javascriptEl = useRef(null);
-  let gsapEl = useRef(null);
-  let materialuiEl = useRef(null);
-  let bootstrapEl = useRef(null);
-  let materializeEl = useRef(null);
-  let sassEl = useRef(null);
-  let nodeEl = useRef(null);
-  let javaEl = useRef(null);
-  let springEl = useRef(null);
-  let mysqlEl = useRef(null);
-  let mongoEl = useRef(null);
 
   const history = useHistory();
 
@@ -46,100 +32,23 @@ const Skills = () => {
 
   useEffect(() => {
     reduceCircleOpacity();
-
+    let frontEndElements = null;
+    let backEndElements = null;
+    frontEndElements = document.querySelectorAll(".stagger-front");
+    backEndElements = document.querySelectorAll(".stagger-back");
     // timeline for animations of skill sets
     const tlFrontEndElements = new gsap.timeline();
     const tlBackEndElements = new gsap.timeline();
-    // push front end element down
-    tlFrontEndElements.to(frontEndEl, {
+    tlFrontEndElements.to(frontEndElements, {
       opacity: 1,
-      duration: 0.2,
-      ease: Back,
       delay: 0.7,
-      yPercent: 80,
+      stagger: { each: 0.1, from: "end", ease: Back },
     });
-    // pushing frontend elements up
-    tlFrontEndElements.to(sassEl, {
+
+    tlBackEndElements.to(backEndElements, {
       opacity: 1,
-      duration: 0.1,
-      delay: 0.4,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlFrontEndElements.to(materializeEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlFrontEndElements.to(bootstrapEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlFrontEndElements.to(materialuiEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlFrontEndElements.to(gsapEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlFrontEndElements.to(javascriptEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlFrontEndElements.to(reactEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlBackEndElements.to(backEndEl, {
-      opacity: 1,
-      duration: 0.2,
-      ease: Back,
       delay: 0.7,
-      yPercent: 80,
-    });
-    // pushing backend elements up
-    tlBackEndElements.to(mongoEl, {
-      opacity: 1,
-      duration: 0.1,
-      delay: 0.4,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlBackEndElements.to(mysqlEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlBackEndElements.to(springEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlBackEndElements.to(javaEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
-    });
-    tlBackEndElements.to(nodeEl, {
-      opacity: 1,
-      duration: 0.1,
-      ease: Back,
-      yPercent: -20,
+      stagger: { each: 0.1, from: "end", ease: Back },
     });
 
     fadeOutLogoNav(logo, nav.current);
@@ -161,72 +70,42 @@ const Skills = () => {
         <Logo changePageFromAnyPageToHome={changeFromSkillsToAny("/")} />
       </div>
       <div className="skills-page-text_wrapper">
-        <div className="skills-page-text-left_table">
+        <div className="skills-page-text-left_table ">
           <ul ref={(el) => (frontEndUl = el)} className="skills-page_list">
-            <li
-              ref={(el) => (frontEndEl = el)}
-              className="skills-page_list-header"
-            >
-              Front-end
-            </li>
-            <li ref={(el) => (reactEl = el)} className="skills-page_list-li">
-              React
-            </li>
-            <li
-              ref={(el) => (javascriptEl = el)}
-              className="skills-page_list-li"
-            >
-              Javascript
-            </li>
-            <li ref={(el) => (gsapEl = el)} className="skills-page_list-li">
+            <li className="skills-page_list-header stagger-front">Front-end</li>
+            <li className="skills-page_list-li stagger-front">React</li>
+            <li className="skills-page_list-li stagger-front">Javascript</li>
+            <li className="skills-page_list-li stagger-front">
               Gsap animation library
             </li>
-            <li
-              ref={(el) => (materialuiEl = el)}
-              className="skills-page_list-li"
-            >
-              Material UI
-            </li>
-            <li
-              ref={(el) => (bootstrapEl = el)}
-              className="skills-page_list-li"
-            >
-              Bootstrap
-            </li>
-            <li
-              ref={(el) => (materializeEl = el)}
-              className="skills-page_list-li"
-            >
-              Materialize
-            </li>
-            <li ref={(el) => (sassEl = el)} className="skills-page_list-li">
-              html5/css3/Sass
+            <li className="skills-page_list-li stagger-front">Material UI</li>
+            <li className="skills-page_list-li stagger-front">Bootstrap</li>
+            <li className="skills-page_list-li stagger-front">Materialize</li>
+            <li className="skills-page_list-li stagger-front">Web Design</li>
+            <li className="skills-page_list-li stagger-front">
+              Implementation of UI design patterns
             </li>
           </ul>
         </div>
         <div className="skills-page-text-right_table">
           <ul ref={(el) => (backEndUl = el)} className="skills-page_list">
-            <li
-              ref={(el) => (backEndEl = el)}
-              className="skills-page_list-header"
-            >
-              Back-end
-            </li>
-            <li ref={(el) => (nodeEl = el)} className="skills-page_list-li">
-              Node JS
-            </li>
-            <li ref={(el) => (javaEl = el)} className="skills-page_list-li">
-              Java
-            </li>
-            <li ref={(el) => (springEl = el)} className="skills-page_list-li">
+            <li className="skills-page_list-header stagger-back">Back-end</li>
+            <li className="skills-page_list-li stagger-back">Node JS</li>
+            <li className="skills-page_list-li stagger-back">Java</li>
+            <li className="skills-page_list-li stagger-back">
               Spring Boot, Spring framework, Hibernate
             </li>
-            <li ref={(el) => (mysqlEl = el)} className="skills-page_list-li">
-              MySQL Database
-            </li>
-            <li ref={(el) => (mongoEl = el)} className="skills-page_list-li">
+            <li className="skills-page_list-li stagger-back">MySQL Database</li>
+            <li className="skills-page_list-li stagger-back">
               MongoDB Database
             </li>
+            <li className="skills-page_list-li stagger-back">
+              Google cloud firebase
+            </li>
+            <li className="skills-page_list-li stagger-back">
+              OOP patterns and designs
+            </li>
+            <li className="skills-page_list-li stagger-back">MVC patterns</li>
           </ul>
         </div>
       </div>

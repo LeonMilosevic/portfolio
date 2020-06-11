@@ -23,6 +23,7 @@ const Projects = () => {
   let projectCard2 = React.createRef();
   let projectCard3 = React.createRef();
   let projectCard4 = React.createRef();
+  let projectCard5 = React.createRef();
   let nav = React.createRef(null);
   let header = useRef(null);
   let exitDiv = useRef(null);
@@ -62,7 +63,6 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    console.log("hello project");
     reduceCircleOpacity();
     const tl = new gsap.timeline();
 
@@ -71,7 +71,7 @@ const Projects = () => {
       duration: 0.5,
       ease: Back,
       delay: 0.7,
-      yPercent: 100,
+      yPercent: 40,
     });
     tl.to(projectCard1.current, {
       opacity: 1,
@@ -98,9 +98,22 @@ const Projects = () => {
       yPercent: -50,
       ease: Back,
     });
+    tl.to(projectCard5.current, {
+      opacity: 1,
+      duration: 0.12,
+      yPercent: -50,
+      ease: Back,
+    });
 
     fadeOutLogoNav(logo, nav.current);
-  }, [projectCard1, projectCard2, projectCard3, projectCard4, nav]);
+  }, [
+    projectCard1,
+    projectCard2,
+    projectCard3,
+    projectCard4,
+    projectCard5,
+    nav,
+  ]);
   return (
     <>
       <div className="container my-3">
@@ -145,7 +158,9 @@ const Projects = () => {
                   ? projectCard2
                   : project.id === 2
                   ? projectCard3
-                  : projectCard4
+                  : project.id === 3
+                  ? projectCard4
+                  : projectCard5
               }
             />
           ))}

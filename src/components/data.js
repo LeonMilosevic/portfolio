@@ -7,10 +7,29 @@ import travel from "../images/travel.jpg";
 import calculator from "../images/calculator.jpg";
 import shopping from "../images/shopping.jpg";
 import work from "../images/work.jpg";
+import recipeApp from "../images/recipe-app.png";
+import recipeCard from "../images/recipe.jpg";
 
 export const projectsApi = [
   {
     id: 0,
+    title: "Recipe app",
+    titleDescription: "Recipe-app",
+    techStack: ["React", "Sass", "Materialize css", "Firebase", "Gsap"],
+    linkCodeFront: "https://github.com/LeonMilosevic/recipe-app",
+    linkCodeBack: "no",
+    linkWebsite: "https://recipe-app-2b6c0.web.app",
+    backgroundImg: recipeApp,
+    cardImg: recipeCard,
+    bgColor: "#bf271f",
+    description: `Simple recipe app where you can create an account and choose an ingridient and diet choices,
+    which then makes an API call to edamam recipe api, and shows the top choices based on your picks.
+     Choices are saved in Firebase db and you can
+    always change your choices.
+    `,
+  },
+  {
+    id: 1,
     title: "Car-share",
     titleDescription: "Connect app",
     techStack: [
@@ -38,20 +57,6 @@ export const projectsApi = [
       it to display how much has the person traveled using this app.
       In order to share a ride or join as a passanger, users need to
       create an account and be logged in.`,
-  },
-  {
-    id: 1,
-    title: "Animations",
-    titleDescription: "Practice",
-    techStack: ["React", "Javascript", "Sass", "Gsap", "Material-UI"],
-    linkCodeFront: "https://github.com/LeonMilosevic/animations",
-    linkCodeBack: "no",
-    linkWebsite: "https://trusting-hugle-827790.netlify.app/",
-    backgroundImg: domasImg,
-    cardImg: work,
-    bgColor: "#C529D4",
-    description: `Worked on animations to practice with GSAP library and transition from page to page
-    `,
   },
   {
     id: 2,
@@ -85,5 +90,19 @@ export const projectsApi = [
     interested in knowing how much calories they are taking with
     their meal. I have decided to build a calculator app that would
     let them easily check that.`,
+  },
+  {
+    id: 4,
+    title: "Animations",
+    titleDescription: "Practice",
+    techStack: ["React", "Javascript", "Sass", "Gsap", "Material-UI"],
+    linkCodeFront: "https://github.com/LeonMilosevic/animations",
+    linkCodeBack: "no",
+    linkWebsite: "https://trusting-hugle-827790.netlify.app/",
+    backgroundImg: domasImg,
+    cardImg: work,
+    bgColor: "#C529D4",
+    description: `Worked on animations to practice with GSAP library and transition from page to page
+    `,
   },
 ];
