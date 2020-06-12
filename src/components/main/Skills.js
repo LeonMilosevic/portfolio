@@ -70,11 +70,16 @@ const Skills = () => {
         <Logo changePageFromAnyPageToHome={changeFromSkillsToAny("/")} />
       </div>
       <div className="skills-page-text_wrapper">
-        <div className="skills-page-text-left_table ">
+        <div>
           <ul ref={(el) => (frontEndUl = el)} className="skills-page_list">
             <li className="skills-page_list-header stagger-front">Front-end</li>
             <li className="skills-page_list-li stagger-front">React</li>
-            <li className="skills-page_list-li stagger-front">Javascript</li>
+            <li className="skills-page_list-li stagger-front">
+              State management with Redux/Context
+            </li>
+            <li className="skills-page_list-li stagger-front">
+              Javascript ES6 ES7
+            </li>
             <li className="skills-page_list-li stagger-front">
               Gsap animation library
             </li>
@@ -87,10 +92,13 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="skills-page-text-right_table">
+        <div>
           <ul ref={(el) => (backEndUl = el)} className="skills-page_list">
             <li className="skills-page_list-header stagger-back">Back-end</li>
             <li className="skills-page_list-li stagger-back">Node JS</li>
+            <li className="skills-page_list-li stagger-back">
+              Real time updates SocketIO
+            </li>
             <li className="skills-page_list-li stagger-back">Java</li>
             <li className="skills-page_list-li stagger-back">
               Spring Boot, Spring framework, Hibernate

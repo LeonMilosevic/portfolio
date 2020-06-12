@@ -3,31 +3,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     display: flex;
+    justify-content: space-around;
     @media (max-width: $screen-max-tablet) {
       display: block;
     }
     @media (max-width: $screen-max-phone) {
       display: block;
-    }
-  }
-  &-left_table {
-    transform: translate(-20%, 0);
-    @media (max-width: $screen-max-tablet) {
-      transform: translate(0, 0);
-    }
-    @media (max-width: $screen-max-phone) {
-      transform: translate(0, 0);
-    }
-  }
-  &-right_table {
-    transform: translate(40%, 0);
-    @media (max-width: $screen-max-tablet) {
-      transform: translate(0, 0);
-    }
-    @media (max-width: $screen-max-phone) {
-      transform: translate(0, 0);
     }
   }
 }
