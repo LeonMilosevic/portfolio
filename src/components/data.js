@@ -22,7 +22,7 @@ export const projectsApi = [
     backgroundImg: recipeApp,
     cardImg: recipeCard,
     bgColor: "#bf271f",
-    description: `Simple recipe app where you can create an account and choose an ingridient and diet choices,
+    description: `Recipe app where you can create an account and choose an ingridient and diet choices,
     which then makes an API call to edamam recipe api, and shows the top choices based on your picks.
      Choices are saved in Firebase db and you can
     always change your choices.
