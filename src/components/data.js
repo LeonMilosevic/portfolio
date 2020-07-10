@@ -30,6 +30,23 @@ export const projectsApi = [
   },
   {
     id: 1,
+    title: "Clothify",
+    titleDescription: "E-commerce",
+    techStack: ["React", "Node", "Javascript", "Sass", "MongoDB", "Bootstrap"],
+    linkCodeFront: "https://github.com/LeonMilosevic/ecommerce-front",
+    linkCodeBack: "https://github.com/LeonMilosevic/ecommerce-back",
+    linkWebsite: "https://clothify.online/",
+    backgroundImg: clothifyImg,
+    cardImg: shopping,
+    bgColor: "#289FFD",
+    description: `An e-commerce app with authentiaction register/login with forgot password feature.
+     Admin management page with create, delete and update operations on products, categories, 
+     shippments, and users. Email notification when a new order is created. 
+     There are filters for searching on clients shopping page with cart and wishlist. 
+     Buying option only when signed in with credit card or paypal system`,
+  },
+  {
+    id: 2,
     title: "Car-share",
     titleDescription: "Connect app",
     techStack: [
@@ -57,23 +74,6 @@ export const projectsApi = [
       it to display how much has the person traveled using this app.
       In order to share a ride or join as a passanger, users need to
       create an account and be logged in.`,
-  },
-  {
-    id: 2,
-    title: "Clothify",
-    titleDescription: "E-commerce",
-    techStack: ["React", "Node", "Javascript", "Sass", "MongoDB", "Bootstrap"],
-    linkCodeFront: "https://github.com/LeonMilosevic/ecommerce-front",
-    linkCodeBack: "https://github.com/LeonMilosevic/ecommerce-back",
-    linkWebsite: "https://clothify.online/",
-    backgroundImg: clothifyImg,
-    cardImg: shopping,
-    bgColor: "#289FFD",
-    description: `An e-commerce app with authentiaction register/login with forgot password feature.
-     Admin management page with create, delete and update operations on products, categories, 
-     shippments, and users. Email notification when a new order is created. 
-     There are filters for searching on clients shopping page with cart and wishlist. 
-     Buying option only when signed in with credit card or paypal system`,
   },
   {
     id: 3,
