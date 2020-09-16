@@ -76,7 +76,7 @@ const Skills = () => {
             <li className="skills-page_list-li stagger-front">React</li>
             <li className="skills-page_list-li stagger-front">Javascript</li>
             <li className="skills-page_list-li stagger-front">
-              Implementation of UI design patterns
+              Implementation of UI designs
             </li>
           </ul>
         </div>
