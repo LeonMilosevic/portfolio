@@ -74,19 +74,7 @@ const Skills = () => {
           <ul ref={(el) => (frontEndUl = el)} className="skills-page_list">
             <li className="skills-page_list-header stagger-front">Front-end</li>
             <li className="skills-page_list-li stagger-front">React</li>
-            <li className="skills-page_list-li stagger-front">
-              State management with Redux/Context
-            </li>
-            <li className="skills-page_list-li stagger-front">
-              Javascript ES6 ES7
-            </li>
-            <li className="skills-page_list-li stagger-front">
-              Gsap animation library
-            </li>
-            <li className="skills-page_list-li stagger-front">Material UI</li>
-            <li className="skills-page_list-li stagger-front">Bootstrap</li>
-            <li className="skills-page_list-li stagger-front">Materialize</li>
-            <li className="skills-page_list-li stagger-front">Web Design</li>
+            <li className="skills-page_list-li stagger-front">Javascript</li>
             <li className="skills-page_list-li stagger-front">
               Implementation of UI design patterns
             </li>
@@ -95,25 +83,14 @@ const Skills = () => {
         <div>
           <ul ref={(el) => (backEndUl = el)} className="skills-page_list">
             <li className="skills-page_list-header stagger-back">Back-end</li>
-            <li className="skills-page_list-li stagger-back">Node JS</li>
-            <li className="skills-page_list-li stagger-back">
-              Real time updates SocketIO
-            </li>
             <li className="skills-page_list-li stagger-back">Java</li>
             <li className="skills-page_list-li stagger-back">
               Spring Boot, Spring framework, Hibernate
             </li>
-            <li className="skills-page_list-li stagger-back">MySQL Database</li>
-            <li className="skills-page_list-li stagger-back">
-              MongoDB Database
-            </li>
-            <li className="skills-page_list-li stagger-back">
-              Google cloud firebase
-            </li>
-            <li className="skills-page_list-li stagger-back">
-              OOP patterns and designs
-            </li>
-            <li className="skills-page_list-li stagger-back">MVC patterns</li>
+            <li className="skills-page_list-li stagger-back">Node JS</li>
+            <li className="skills-page_list-li stagger-back">Relational db</li>
+            <li className="skills-page_list-li stagger-back">NoSQL db</li>
+            <li className="skills-page_list-li stagger-back">OOP</li>
           </ul>
         </div>
       </div>
