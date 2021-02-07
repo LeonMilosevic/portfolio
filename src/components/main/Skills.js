@@ -72,25 +72,29 @@ const Skills = () => {
       <div className="skills-page-text_wrapper">
         <div>
           <ul ref={(el) => (frontEndUl = el)} className="skills-page_list">
-            <li className="skills-page_list-header stagger-front">Front-end</li>
-            <li className="skills-page_list-li stagger-front">React</li>
-            <li className="skills-page_list-li stagger-front">Javascript</li>
+            <li className="skills-page_list-header stagger-front">Languages</li>
+            <li className="skills-page_list-li stagger-front">Python</li>
+            <li className="skills-page_list-li stagger-front">SQL</li>
             <li className="skills-page_list-li stagger-front">
-              Implementation of UI designs
+              Java
+            </li>
+            <li className="skills-page_list-li stagger-front">
+              Javascript
             </li>
           </ul>
         </div>
         <div>
           <ul ref={(el) => (backEndUl = el)} className="skills-page_list">
-            <li className="skills-page_list-header stagger-back">Back-end</li>
-            <li className="skills-page_list-li stagger-back">Java</li>
+            <li className="skills-page_list-header stagger-back">Skills</li>
+            <li className="skills-page_list-li stagger-back">Data Exploration</li>
             <li className="skills-page_list-li stagger-back">
-              Spring Boot, Spring framework, Hibernate
+              Data Wrangling
             </li>
-            <li className="skills-page_list-li stagger-back">Node JS</li>
-            <li className="skills-page_list-li stagger-back">Relational db</li>
-            <li className="skills-page_list-li stagger-back">NoSQL db</li>
-            <li className="skills-page_list-li stagger-back">OOP</li>
+            <li className="skills-page_list-li stagger-back">Scraping</li>
+            <li className="skills-page_list-li stagger-back">Building APIs</li>
+            <li className="skills-page_list-li stagger-back">Feature Engineering</li>
+            <li className="skills-page_list-li stagger-back">Modeling</li>
+            <li className="skills-page_list-li stagger-back">Object Oriented Programming</li>
           </ul>
         </div>
       </div>

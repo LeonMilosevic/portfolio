@@ -18,7 +18,6 @@ const Contact = () => {
   let header = useRef(null);
   let name = useRef(null);
   let email = useRef(null);
-  let phone = useRef(null);
   let github = useRef(null);
   let nav = React.createRef(null);
   const history = useHistory();
@@ -32,7 +31,6 @@ const Contact = () => {
       header,
       name,
       email,
-      phone,
       github
     );
     setTimeout(() => {
@@ -59,12 +57,6 @@ const Contact = () => {
       yPercent: -20,
     });
     tl.to(email, {
-      opacity: 1,
-      duration: 0.2,
-      ease: Back,
-      yPercent: -20,
-    });
-    tl.to(phone, {
       opacity: 1,
       duration: 0.2,
       ease: Back,
@@ -114,12 +106,6 @@ const Contact = () => {
             ref={(el) => (email = el)}
           >
             email: leonn.milosevic@gmail.com
-          </div>
-          <div
-            className="contact-page_contact-info_phone"
-            ref={(el) => (phone = el)}
-          >
-            phone: +37060754357
           </div>
           <div>
             <a

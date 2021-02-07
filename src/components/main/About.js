@@ -88,8 +88,8 @@ const About = () => {
             About me
           </h6>
           <p className="about-page_text-text" ref={(el) => (text = el)}>
-            I am a software developer who loves coding, enjoys learning and
-            exploring. My main goal is to work on products that are interesting
+            I am a data science enthusiast who loves exploring data, finding patterns and
+            helping businesses succeed. My main goal is to work on projects that are interesting
             and helping users in any way. I have competitive nature, I’m always
             seeking for more, I enjoy overcoming challenges.
           </p>

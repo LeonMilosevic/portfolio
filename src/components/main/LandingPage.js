@@ -66,7 +66,7 @@ const LandingPage = (props) => {
         ref={(el) => (subHeaderText = el)}
         className="landing-page_subheader-text"
       >
-        software developer
+        data scientist
       </div>
       <Nav
         ref={nav}
